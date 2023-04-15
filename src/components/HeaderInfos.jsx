@@ -19,8 +19,8 @@ const HeaderInfos = () => {
 					</h1>
 				</li>
 				<li>
-					Crypto-monnaies:
-					{headerData.active_cryptocurrencie && headerData.active_cryptocurrencies.toLocaleString()}
+					Crypto-monnaies: 
+					{' ' +headerData.active_cryptocurrencies.toLocaleString()}
 				</li>
 				<li>Marchés : {headerData.markets && headerData.markets}</li>
 			</ul>
