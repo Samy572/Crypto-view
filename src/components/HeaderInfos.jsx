@@ -8,7 +8,7 @@ const HeaderInfos = () => {
 	useEffect(() => {
 		axios.get('https://api.coingecko.com/api/v3/global').then((res) => setHeaderData(res.data.data));
 	}, []);
-	console.log(headerData);
+
 	return (
 		<div className="header-container">
 			<ul className="title">
