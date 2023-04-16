@@ -14,13 +14,13 @@ const HeaderInfos = () => {
 			<ul className="title">
 				<li>
 					<h1>
-						<img src="./vite.svg" alt="logo" />
+						<img src="/public/assets/vite.svg" alt="logo" />
 						Crypto view
 					</h1>
 				</li>
 				<li>
-					Crypto-monnaies: 
-					{' ' +headerData.active_cryptocurrencies.toLocaleString()}
+					Crypto-monnaies:
+					{' ' + headerData.active_cryptocurrencies}
 				</li>
 				<li>Marchés : {headerData.markets && headerData.markets}</li>
 			</ul>
