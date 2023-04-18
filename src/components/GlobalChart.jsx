@@ -21,7 +21,14 @@ const GlobalChart = ({ coinsData }) => {
 	};
 
 	const excludeCoin = (coin) => {
-		if (coin === 'usdt' || coin === 'usdc' || coin === 'busd' || coin === 'dai' || coin === 'wbtc' || coin === 'steth') {
+		if (
+			coin === 'usdt' ||
+			coin === 'usdc' ||
+			coin === 'busd' ||
+			coin === 'dai' ||
+			coin === 'wbtc' ||
+			coin === 'steth'
+		) {
 			return false;
 		} else {
 			return true;
@@ -36,7 +43,10 @@ const GlobalChart = ({ coinsData }) => {
 				if (excludeCoin(coinsData[i].symbol)) {
 					chartData.push({
 						name:
-							coinsData[i].symbol.toUpperCase() + ' ' + coinsData[i].market_cap_change_percentage_24h.toFixed(1) + '%',
+							coinsData[i].symbol.toUpperCase() +
+							' ' +
+							coinsData[i].market_cap_change_percentage_24h.toFixed(1) +
+							'%',
 						size: coinsData[i].market_cap,
 						fill: colorPicker(coinsData[i].market_cap_change_percentage_24h),
 					});
@@ -59,7 +69,15 @@ const GlobalChart = ({ coinsData }) => {
 
 	return (
 		<div className="global-chart">
-			<Treemap width={730} height={181} data={dataArray} dataKey="size" stroke="white" fill="black" aspectRatio="1">
+			<Treemap
+				width={730}
+				height={181}
+				data={dataArray}
+				dataKey="size"
+				stroke="white"
+				fill="black"
+				aspectRatio="1"
+			>
 				<Tooltip content={TreemapToolTip} />
 			</Treemap>
 		</div>

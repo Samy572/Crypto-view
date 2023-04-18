@@ -6,13 +6,13 @@ const PercentChange = ({ percent }) => {
 	useEffect(() => {
 		if (percent) {
 			if (percent >= 0) {
-				setColor('green');
+				setColor('#43a047');
 			} else {
 				setColor('red');
 			}
 		} else {
 			setColor('white');
-		}    
+		}
 	}, [percent]);
 
 	return (

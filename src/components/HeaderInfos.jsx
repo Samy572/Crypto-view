@@ -14,7 +14,7 @@ const HeaderInfos = () => {
 			<ul className="title">
 				<li>
 					<h1>
-						<img src="/public/assets/vite.svg" alt="logo" />
+						<img src="/assets/vite.svg" alt="logo" />
 						Crypto view
 					</h1>
 				</li>
@@ -31,6 +31,9 @@ const HeaderInfos = () => {
 				</li>
 				<li>
 					BTC dominance {headerData.market_cap_percentage && headerData.market_cap_percentage.btc.toFixed(1) + '%'}
+				</li>
+				<li>
+					ETH dominance {headerData.market_cap_percentage && headerData.market_cap_percentage.eth.toFixed(1) + '%'}
 				</li>
 				<li>
 					XRP dominance {headerData.market_cap_percentage && headerData.market_cap_percentage.xrp.toFixed(1) + '%'}
